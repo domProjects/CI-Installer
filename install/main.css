@@ -1,6 +1,5 @@
 :root {
 	--header-height: 170px;
-	--nav-height: 60px;
 	--footer-height: 55px;
 	--ci-primary: #dd4814;
 	--ci-secondary: #ae3910;
@@ -21,18 +20,9 @@ header {
 	height: var(--header-height);
 }
 
-nav {
-	background-color: var(--ci-primary);
-	position: fixed;
-	top: var(--header-height);
-	right: 0;
-	left: 0;
-	height: var(--nav-height);
-}
-
 main {
 	position: absolute;
-	top: calc(var(--header-height) + var(--nav-height));
+	top: var(--header-height);
 	right: 0;
 	bottom: var(--footer-height);
 	left: 0;
@@ -50,16 +40,11 @@ footer {
 	height: var(--footer-height);
 }
 
-.nav-pills .nav-link {
-	background-color: var(--ci-primary);
-	color: var(--white);
-	border-radius: 0;
-	text-transform: uppercase;
+fieldset:hover {
+	background-color: #eee;
 }
-.nav-pills .nav-link.active,
-.nav-pills .nav-link:hover {
-	background-color: var(--ci-secondary);
-	color: var(--white);
+.card {
+	border-radius: 0;
 }
 
 .form-control {

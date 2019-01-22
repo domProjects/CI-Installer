@@ -17,59 +17,66 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			</div>
 		</header>
 
-		<nav class="d-flex align-items-center">
-			<div class="container">
-				<ul class="nav nav-pills nav-fill" id="pills-tab" role="tablist">
-					<li class="nav-item">
-						<a class="nav-link active" id="pills-url-tab" data-toggle="pill" href="#pills-url" role="tab" aria-controls="pills-url" aria-selected="true">Base URL</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" id="pills-database-tab" data-toggle="pill" href="#pills-database" role="tab" aria-controls="pills-database" aria-selected="false">Database</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" id="pills-summary-tab" data-toggle="pill" href="#pills-summary" role="tab" aria-controls="pills-summary" aria-selected="false">Summary</a>
-					</li>
-				</ul>
-			</div>
-		</nav>
-
 		<form action="" method="post" accept-charset="utf-8">
 			<main>
-				<div class="container p-3">
-					<div class="tab-content" id="pills-tabContent">
-						<div class="tab-pane fade show active" id="pills-url" role="tabpanel" aria-labelledby="pills-url-tab">
-							<div class="form-group">
-								<label for="base-url">Base URL</label>
-								<input class="form-control form-control-lg" type="text" name="base-url" id="base-url" value="<?php echo $site_url; ?>" required>
-							</div>
-						</div>
-						<div class="tab-pane fade" id="pills-database" role="tabpanel" aria-labelledby="pills-database-tab">
-							<div class="form-group">
-								<label for="db-hostname">Hostname</label>
-								<input class="form-control form-control-lg" type="text" name="db-hostname" id="db-hostname" value="localhost" required>
-							</div>
-							<div class="form-group">
-								<label for="db-user">Database User</label>
-								<input class="form-control form-control-lg" type="text" name="db-user" id="db-user" required>
-							</div>
-							<div class="form-group">
-								<label for="db-password">Database Password</label>
-								<input class="form-control form-control-lg" type="text" name="db-password" id="db-password">
-							</div>
-							<div class="form-group">
-								<label for="db-name">Database Name</label>
-								<input class="form-control form-control-lg" type="text" name="db-name" id="db-name" required>
-							</div>
-						</div>
-						<div class="tab-pane fade" id="pills-summary" role="tabpanel" aria-labelledby="pills-summary-tab">
-							<p>Base URL: <code id="sum-base-url"></code></p>
+				<div class="container">
+					<div class="card">
+						<div class="card-body p-0">
+							<fieldset class="mb-4 p-3">
+								<label class="font-weight-bold text-uppercase">Base URL</label>
+								<p class="mb-4">xxx</p>
+								<div class="form-group row">
+									<label for="base-url" class="col-sm-3 col-form-label">Base URL</label>
+									<div class="col-sm-9">
+										<input class="form-control" type="text" name="base-url" id="base-url" value="<?php echo $site_url; ?>" required>
+									</div>
+								</div>
+							</fieldset>
+							<fieldset class="p-3">
+								<label class="font-weight-bold text-uppercase">Database</label>
+								<p class="mb-4">You must enter the login details for your database below. If you do not know them, contact your host.</p>
+								<div class="form-group row">
+									<label for="db-hostname" class="col-sm-3 col-form-label">Address of the database</label>
+									<div class="col-sm-9">
+										<input class="form-control" type="text" name="db-hostname" id="db-hostname" value="localhost" aria-describedby="db-hostname-help" required>
+										<small id="db-hostname-help" class="form-text">If <code>localhost</code> does not work, ask this information to the host of your site.</small>
+									</div>
+								</div>
+								<div class="form-group row">
+									<label for="db-login" class="col-sm-3 col-form-label">Login</label>
+									<div class="col-sm-9">
+										<input class="form-control" type="text" name="db-login" id="db-login" aria-describedby="db-login-help" required>
+										<small id="db-login-help" class="form-text">Username of your database.</small>
+									</div>
+								</div>
+								<div class="form-group row">
+									<label for="db-password" class="col-sm-3 col-form-label">Password</label>
+									<div class="col-sm-9">
+										<input class="form-control" type="text" name="db-password" id="db-password" aria-describedby="db-password-help">
+										<small id="db-password-help" class="form-text">Your database password.</small>
+									</div>
+								</div>
+								<div class="form-group row">
+									<label for="db-name" class="col-sm-3 col-form-label">Name of the database</label>
+									<div class="col-sm-9">
+										<input class="form-control" type="text" name="db-name" id="db-name" aria-describedby="db-name-help" required>
+										<small id="db-name-help" class="form-text">The name of the database with which you want to use CodeIgniter.</small>
+									</div>
+								</div>
+								<div class="form-group row">
+									<label for="db-prefix" class="col-sm-3 col-form-label">Prefix of tables</label>
+									<div class="col-sm-9">
+										<input class="form-control" type="text" name="db-prefix" id="db-prefix" value="ci_" aria-describedby="db-prefix-help" required>
+										<small id="db-prefix-help" class="form-text">If you want to run multiple installations of CodeIgniter on the same database, change this setting.</small>
+									</div>
+								</div>
+							</fieldset>
 						</div>
 					</div>
 				</div>
 			</main>
 			<footer class="d-flex align-items-center">
 				<div class="container d-flex justify-content-end">
-					<button type="button" class="btn btn-primary btn-lg mr-3">Previous</button>
 					<button type="button" class="btn btn-primary btn-lg">Next</button>
 				</div>
 			</footer>
