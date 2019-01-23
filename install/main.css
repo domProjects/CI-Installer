@@ -40,9 +40,11 @@ footer {
 	height: var(--footer-height);
 }
 
-fieldset:hover {
-	background-color: #eee;
+fieldset > label {
+	background-color: var(--ci-primary);
+	color: var(--white);
 }
+
 .card {
 	border-radius: 0;
 }

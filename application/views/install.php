@@ -6,8 +6,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<head>
 		<meta charset="utf-8">
 		<title>Installation of CodeIgniter</title>
-		<link rel="stylesheet" href="<?php echo base_url('install/bootstrap.min.css'); ?>">
-		<link rel="stylesheet" href="<?php echo base_url('install/main.css'); ?>">
+		<link rel="stylesheet" href="<?php echo $site_url; ?>/install/bootstrap.min.css">
+		<link rel="stylesheet" href="<?php echo $site_url; ?>/install/main.css">
 	</head>
 	<body>
 		<header class="d-flex align-items-center">
@@ -22,19 +22,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<div class="container">
 					<div class="card">
 						<div class="card-body p-0">
-							<fieldset class="mb-4 p-3">
-								<label class="font-weight-bold text-uppercase">Base URL</label>
-								<p class="mb-4">xxx</p>
+							<fieldset class="p-3">
+								<label class="w-100 p-3 font-weight-bold text-uppercase">Base URL</label>
+								<p class="mb-4 font-weight-bold">You must enter the address of your site where CodeIgniter will be executed. By default, the installation script detects this one.</p>
 								<div class="form-group row">
 									<label for="base-url" class="col-sm-3 col-form-label">Base URL</label>
 									<div class="col-sm-9">
-										<input class="form-control" type="text" name="base-url" id="base-url" value="<?php echo $site_url; ?>" required>
+										<input class="form-control" type="text" name="base-url" id="base-url" value="<?php echo $site_url; ?>" aria-describedby="base-url-help" required>
+										<small id="base-url-help" class="form-text">Address of your site.</small>
 									</div>
 								</div>
 							</fieldset>
 							<fieldset class="p-3">
-								<label class="font-weight-bold text-uppercase">Database</label>
-								<p class="mb-4">You must enter the login details for your database below. If you do not know them, contact your host.</p>
+								<label class="w-100 p-3 font-weight-bold text-uppercase">Database</label>
+								<p class="mb-4 font-weight-bold">You must enter the login details for your database below. If you do not know them, contact your host.</p>
 								<div class="form-group row">
 									<label for="db-hostname" class="col-sm-3 col-form-label">Address of the database</label>
 									<div class="col-sm-9">
@@ -82,8 +83,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			</footer>
 		</form>
 
-		<script src="<?php echo base_url('install/jquery.slim.min.js'); ?>"></script>
-		<script src="<?php echo base_url('install/bootstrap.bundle.min.js'); ?>"></script>
-		<script src="<?php echo base_url('install/main.js'); ?>"></script>
+		<script src="<?php echo $site_url; ?>/install/jquery.slim.min.js"></script>
+		<script src="<?php echo $site_url; ?>/install/bootstrap.bundle.min.js"></script>
+		<script src="<?php echo $site_url; ?>/install/main.js"></script>
 	</body>
 </html>
