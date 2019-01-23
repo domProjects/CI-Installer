@@ -5,6 +5,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <html>
 	<head>
 		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<title>Installation of CodeIgniter</title>
 		<link rel="stylesheet" href="<?php echo $site_url; ?>/install/bootstrap.min.css">
 		<link rel="stylesheet" href="<?php echo $site_url; ?>/install/main.css">
