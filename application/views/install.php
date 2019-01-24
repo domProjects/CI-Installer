@@ -35,6 +35,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								</div>
 							</fieldset>
 							<fieldset class="p-3">
+								<label class="w-100 p-3 font-weight-bold text-uppercase">Cleaning the URL</label>
+								<p class="m-0 font-weight-bold">Deleting the display of the <code>index.php</code> file in your URLs.</p>
+								<p class="m-0">If you enable this option your URL will look like this: <code>http://domain.com/page1</code>.</p>
+								<p class="mb-4">Otherwise your default URL will be built like this: <code>http://domain.com/<strong>index.php</strong>/page1</code></p>
+								<div class="form-group row">
+									<label for="base-url" class="col-sm-3 col-form-label">Enable cleaning</label>
+									<div class="col-sm-9 d-flex align-items-center">
+										<div class="custom-control custom-radio custom-control-inline">
+											<input type="radio" name="clean-url" id="clean-url-true" class="custom-control-input" checked>
+											<label class="custom-control-label" for="clean-url-true">yes (<em>recommend</em>)</label>
+										</div>
+										<div class="custom-control custom-radio custom-control-inline">
+											<input type="radio" name="clean-url" id="clean-url-false" class="custom-control-input">
+											<label class="custom-control-label" for="clean-url-false">no</label>
+										</div>
+									</div>
+								</div>
+							</fieldset>
+							<fieldset class="p-3">
 								<label class="w-100 p-3 font-weight-bold text-uppercase">Database</label>
 								<p class="mb-4 font-weight-bold">You must enter the login details for your database below. If you do not know them, contact your host.</p>
 								<div class="form-group row">

@@ -80,3 +80,8 @@ fieldset > label {
 .btn-primary:not(:disabled):not(.disabled):active:focus {
 	box-shadow: 0 0 0 0.2rem rgba(221, 72, 20, .25);
 }
+
+.custom-control-input:checked ~ .custom-control-label::before {
+    border-color: var(--ci-primary);
+    background-color: var(--ci-primary);
+}

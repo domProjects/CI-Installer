@@ -20,6 +20,15 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('welcome_message');
+		if (STATUS_INSTALL !== FALSE)
+		{
+			$this->load->helper('url');
+
+			redirect('install');
+		}
+		else
+		{
+			$this->load->view('welcome_message');
+		}
 	}
 }

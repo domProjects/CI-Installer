@@ -17,7 +17,7 @@ class Install extends CI_Controller {
 		{
 		    $is_secure = TRUE;
 		}
-		elseif ( ! empty($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https' || ! empty($_SERVER['HTTP_X_FORWARDED_SSL']) && $_SERVER['HTTP_X_FORWARDED_SSL'] == 'on')
+		elseif ( ! empty($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https' OR ! empty($_SERVER['HTTP_X_FORWARDED_SSL']) && $_SERVER['HTTP_X_FORWARDED_SSL'] == 'on')
 		{
 		    $is_secure = TRUE;
 		}
@@ -28,7 +28,7 @@ class Install extends CI_Controller {
 
 		$protocol = $is_secure ? 'https' : 'http';
 
-		$this->site_url = $protocol.'://'.$_SERVER['HTTP_HOST'].str_replace(basename($_SERVER['SCRIPT_NAME']), '', $_SERVER['SCRIPT_NAME']);
+		$this->site_url = $protocol.'://'.str_replace('[::1]', 'localhost', $_SERVER['HTTP_HOST']).str_replace(basename($_SERVER['SCRIPT_NAME']), '', $_SERVER['SCRIPT_NAME']);
 	}
 
 	public function index()
