@@ -85,3 +85,8 @@ fieldset > label {
     border-color: var(--ci-primary);
     background-color: var(--ci-primary);
 }
+
+.badge {
+	padding: .5rem;
+	border-radius: 0;
+}
